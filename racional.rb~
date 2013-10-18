@@ -78,5 +78,12 @@ class Fraccion
 		return %Q(#{@n} #{@d})
 	end
 
+	def simplificar  #devuelve una cadena
+	        n=@n
+		d=@d
+		max = gcd(n,d) #maximo comun divisor  
+		return Fraccion.new((n/max), (d/max))
+	  
+	end
   
 end
